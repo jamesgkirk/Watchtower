@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watchtower Records — Label · Production · Publishing</title>
+  <meta name="description" content="Watchtower Records is an independent label, production, and publishing company based in Los Angeles.">
+
+  <!-- Canonical — TODO: update to live domain before launch -->
+  <link rel="canonical" href="https://watchtowerrecords.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Watchtower Records">
+  <meta property="og:description" content="Label · Production · Publishing — Los Angeles">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://watchtowerrecords.com/">
+  <!-- TODO: add og:image once artwork is finalised -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Watchtower Records">
+  <meta name="twitter:description" content="Label · Production · Publishing — Los Angeles">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/watchtower-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/watchtower-logo.svg">
+
+  <!-- Sitemap hint for crawlers -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Poppins — non-blocking load (print → all swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  </noscript>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body id="top">
+
+  <!-- Skip link — keyboard and screen reader users jump straight to content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="Watchtower Records — home">
+        <img
+          src="assets/watchtower-logo.svg"
+          alt="Watchtower Records"
+          class="logo-img"
+          fetchpriority="high"
+        >
+      </a>
+      <ul class="nav-links" id="nav-links" role="list"></ul>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="nav-overlay"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+      <ul class="nav-overlay-links" id="nav-overlay-links" role="list"></ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="hero" aria-label="Watchtower Records">
+      <div class="hero-inner">
+        <img
+          src="assets/watchtower-logo.svg"
+          alt="Watchtower Records"
+          class="hero-logo"
+          width="320"
+          height="320"
+          fetchpriority="high"
+        >
+        <div class="hero-rule"></div>
+        <p class="hero-tagline" id="hero-tagline"></p>
+        <a href="#contact" class="btn-accent">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section id="contact" aria-label="Contact Watchtower Records">
+      <div class="container">
+        <h2 class="section-heading fade-up">Contact</h2>
+
+        <div id="contact-form-wrap" class="fade-up">
+          <!-- TODO: replace action with Formspree or Netlify Forms endpoint -->
+          <form id="contact-form" action="" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  autocomplete="given-name"
+                >
+              </div>
+              <div class="form-field">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  autocomplete="family-name"
+                >
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                aria-required="true"
+                autocomplete="email"
+              >
+              <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message <span class="required-mark" aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                aria-required="true"
+              ></textarea>
+              <span class="field-error" id="message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn-accent" id="submit-btn">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-social fade-up">
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/watchtowerrec/"
+              id="instagram-link"
+              aria-label="Watchtower Records on Instagram"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="5"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- TikTok link — shown only when tiktokUrl is set in CONFIG -->
+            <a
+              href="#"
+              id="tiktok-link"
+              aria-label="Watchtower Records on TikTok"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            >
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.95a8.16 8.16 0 0 0 4.77 1.52V7a4.85 4.85 0 0 1-1-.31z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="contact-meta">
+            <p class="hero-city" id="hero-city"></p>
+            <p class="hero-est" id="hero-est"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy" id="footer-copy"></p>
+      <ul class="footer-links" id="footer-links" role="list"></ul>
+    </div>
+  </footer>
+
+</body>
+</html>
